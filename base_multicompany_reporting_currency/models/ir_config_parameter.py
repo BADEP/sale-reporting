@@ -18,7 +18,7 @@ class IrConfigParameter(models.Model):
         res = super().init(force=force)
         key = self._get_multicompany_reporting_currency_key()
         if not self.search([("key", "=", key)]):
-            self.set_param(key, str(self.env.ref("base.EUR").id))
+            self.set_str(key, str(self.env.ref("base.EUR").id))
         return res
 
     @api.model_create_multi

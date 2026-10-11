@@ -40,7 +40,7 @@ class MulticompanyReportingCurrencyMixin(models.AbstractModel):
         # we cannot be 100% sure we'll be able to convert it to a ``res.currency``
         # record ID, we use the user's environmental company currency as fallback
         key = "base_multicompany_reporting_currency.multicompany_reporting_currency"
-        if value := self.env["ir.config_parameter"].sudo().get_param(key, default=""):
+        if value := self.env["ir.config_parameter"].sudo().get_str(key, default=""):
             try:
                 currency = currency.browse(int(value)).exists()
             except ValueError:  # pylint: disable=except-pass

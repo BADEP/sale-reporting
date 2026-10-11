@@ -6,6 +6,8 @@ from .common import Common
 
 
 class TestBaseMulticompanyReportingCurrency(Common):
+    _test_user_groups = None
+
     def test_00_multicompany_reporting_currency(self):
         """Checks the correct multicompany reporting currency is retrieved"""
         ref = self.env.ref

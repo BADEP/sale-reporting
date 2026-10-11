@@ -28,7 +28,7 @@ class Common(BaseCommon):
         "odoo.addons.base_multicompany_reporting_currency.models.multicompany_reporting_currency_mixin"
     )
     def _set_multicompany_reporting_currency_param(self, currency_id):
-        self.env["ir.config_parameter"].sudo().set_param(
+        self.env["ir.config_parameter"].sudo().set_str(
             "base_multicompany_reporting_currency.multicompany_reporting_currency",
             currency_id,
         )
