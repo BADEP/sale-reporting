@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record model="ir.actions.act_window" id="action_sale_order_comment_template">
+    <record id="action_sale_order_comment_template" model="ir.actions.act_window">
         <field name="name">Sale Orders Comments</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">base.comment.template</field>
@@ -9,8 +9,8 @@
         <field name="context" eval="{'default_models': 'sale.order'}" />
     </record>
     <menuitem
-        name="Document Comments"
         id="menu_base_comment_template_sale"
+        name="Document Comments"
         action="sale_comment_template.action_sale_order_comment_template"
         parent="sale.menu_sale_config"
     />
