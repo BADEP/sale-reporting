@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="crm_team_view_kanban_dashboard_reporting" model="ir.ui.view">
         <field name="name">crm.team.view.kanban.dashboard.reporting</field>
         <field name="model">crm.team</field>
         <field name="inherit_id" ref="sales_team.crm_team_view_kanban_dashboard" />
         <field name="mode">primary</field>
-        <field name="priority">20</field>
+        <field name="priority" eval="20" />
         <field name="arch" type="xml">
             <xpath expr="//templates" position="before">
                 <field name="quotations_count" />
@@ -30,8 +30,8 @@
                     <div class="row gx-1">
                         <div class="col-12">
                             <div
-                                class="row"
                                 t-if="record.lead_unassigned_count.raw_value"
+                                class="row"
                             >
                                 <a
                                     class="col-8"
@@ -47,8 +47,8 @@
                                 </a>
                             </div>
                             <div
-                                class="row"
                                 t-if="record.opportunities_count.raw_value"
+                                class="row"
                             >
                                 <a
                                     class="col-8"
@@ -71,8 +71,8 @@
                                 </div>
                             </div>
                             <div
-                                class="row"
                                 t-if="record.opportunities_overdue_count.raw_value"
+                                class="row"
                             >
                                 <a
                                     class="col-8"
@@ -96,7 +96,7 @@
                                     />
                                 </div>
                             </div>
-                            <div class="row" t-if="record.quotations_count.raw_value">
+                            <div t-if="record.quotations_count.raw_value" class="row">
                                 <a
                                     class="col"
                                     name="%(sale.action_quotations_salesteams)d"
@@ -123,8 +123,8 @@
                                 </div>
                             </div>
                             <div
-                                class="row"
                                 t-if="record.sales_to_invoice_count.raw_value"
+                                class="row"
                             >
                                 <a
                                     class="col"
