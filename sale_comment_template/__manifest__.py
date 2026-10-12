@@ -7,7 +7,7 @@
 {
     "name": "Sale Comments",
     "summary": "Comments texts templates on Sale documents",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "Sale",
     "website": "https://github.com/OCA/sale-reporting",
     "author": "Camptocamp, Tecnativa, Odoo Community Association (OCA)",
@@ -21,6 +21,6 @@
         "views/sale_order_view.xml",
         "views/base_comment_template_view.xml",
         "views/report_saleorder.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
     ],
 }
